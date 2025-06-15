@@ -9,7 +9,8 @@ export const useSocket=()=>{
 }
 
 export const SocketProvider=({children})=>{
-    const socket=useMemo(()=>io("localhost:3000"),[])
+    const server_url=import.meta.env.VITE_SERVER_URL;
+    const socket=useMemo(()=>io(server_url),[])
     return (
         <socketContext.Provider value={socket}>
             {children}
