@@ -1,0 +1,4 @@
+/node_modules/
+ssh_frontend.txt.pub
+ssh_frontend.txt
+/config/.env
